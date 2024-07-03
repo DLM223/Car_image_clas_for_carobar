@@ -56,7 +56,7 @@ def main():
 
     if uploaded_file is not None:
         try:
-            with st.spinner("Loading and processing the image..."):
+            with st.spinner("Loading and processing the image...."):
                 # Preprocess the image
                 image = preprocess_image(uploaded_file)
 
@@ -71,8 +71,6 @@ def main():
                 st.write(
                     f"The second most probable car is   : {second_highest_class} ({probabilities[sorted_indices[1]] * 100:.2f}%)")
                 st.image(uploaded_file)
-
-
 
         except Exception as e:
             st.error(f"Error processing image: {e}")
